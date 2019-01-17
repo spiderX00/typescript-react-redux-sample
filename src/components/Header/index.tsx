@@ -3,7 +3,7 @@ import styled, {theme} from "../../theme"
 
 import Button from "../Button";
 
-import LargeLogoPng from "../../assets/images/brand-logo/large.png";
+import Logo from '../../components/Logo';
 
 export const StyledHeader = styled.header`
    display: flex;
@@ -18,21 +18,11 @@ export const StyledHeader = styled.header`
    }
 `;
 
-export const LargeLogo = styled.div`
-    background: url(${LargeLogoPng}) no-repeat top left;
-    background-size: contain;
-    padding: 0;
-    width: 300px;
-    max-width: 100%; 
-    display:block; 
-    height: 32px;
-`;
-
 class Header extends React.Component {
     render() {
         return (
             <StyledHeader>
-                <LargeLogo/>
+                <Logo/>
                 <Button name="Cancel" />
             </StyledHeader>
         )
