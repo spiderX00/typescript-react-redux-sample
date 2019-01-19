@@ -1,9 +1,9 @@
-import React, { Children } from 'react';
+import React, {Children} from 'react';
 import styled, {theme} from "../../theme"
 
 import Button from "../Button";
 
-import Logo from '../../components/Logo';
+import {LargeLogo} from '../Logo/index';
 
 export const StyledHeader = styled.header`
    display: flex;
@@ -22,8 +22,8 @@ class Header extends React.Component {
     render() {
         return (
             <StyledHeader>
-                <Logo/>
-                <Button name="Cancel" />
+                <LargeLogo/>
+                <Button name="Cancel"/>
             </StyledHeader>
         )
     }

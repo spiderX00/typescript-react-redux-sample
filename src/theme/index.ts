@@ -10,7 +10,7 @@ const {
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<IThemeInterface>;
 
 export interface IThemeInterface {
-    [key:string]: string;
+    [key: string]: string;
     base: string;
     primary: string;
     secondary: string;
@@ -34,4 +34,4 @@ export const theme: IThemeInterface = {
 };
 
 export default styled;
-export { css, keyframes, ThemeProvider };
+export {css, keyframes, ThemeProvider};

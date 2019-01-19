@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React, {Children} from 'react';
 import styled, {theme} from "../../theme";
 
 export const StyledButton = styled.button`
@@ -21,27 +21,25 @@ export const StyledButton = styled.button`
   -webkit-touch-callout: none;  
   
   background-color: ${props => {
-    return props.disabled? props.theme.gray : props.theme.primary;
-  }}   
+    return props.disabled ? props.theme.gray : props.theme.primary;
+}}   
    
   border-color: ${props => {
-    return props.disabled? props.theme.gray : props.theme.primary;
-  }}  
+    return props.disabled ? props.theme.gray : props.theme.primary;
+}}  
  
   &:focus, &:hover {
       outline: 0;
       box-shadow: none;
         
       background-color: ${props => {
-        return props.disabled? props.theme.gray : props.theme.secondary;
+       return props.disabled ? props.theme.gray : props.theme.secondary;
       }}   
    
-      border-color: ${props => {
-       return props.disabled? props.theme.gray : props.theme.secondary;
+       border-color: ${props => {
+        return props.disabled ? props.theme.gray : props.theme.secondary;
       }}  
-  }
-  
-`;
+  }`;
 
 export interface Props {
     name: string,
