@@ -3,7 +3,7 @@ import {Record} from 'immutable';
 import {LOAD_COUNTER, LOAD_COUNTER_SUCCESS, LOAD_COUNTER_ERROR} from './constants';
 import {Action} from './actions';
 
-interface IStateRecord {
+export interface IStateRecord {
     loading: boolean;
     error: boolean;
     success: boolean;
@@ -19,9 +19,7 @@ class State extends Record<IStateRecord>({
     value: 0,
 }) {}
 
-const initialState = new State();
-
-//export type ThunkResult<R> = ThunkAction<R, State, undefined, Action>;
+export const initialState = new State();
 
 function AppReducer(state = initialState, action: Action) {
     switch (action.type) {
