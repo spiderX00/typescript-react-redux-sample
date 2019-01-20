@@ -1,8 +1,12 @@
 import React, {Children} from 'react';
-import styled from "../../theme";
+import styled, {keyframes} from "../../theme";
 
 import LargeLogoPng from "../../assets/images/brand-logo/large.png";
 import SmallLogoPng from "../../assets/images/brand-logo/small.png";
+
+const rotate = keyframes`
+    to {transform: rotate(360deg);}
+`;
 
 const StyledLargeLogo = styled.div`
       background: url(${LargeLogoPng}) no-repeat;
@@ -12,7 +16,6 @@ const StyledLargeLogo = styled.div`
       max-width: 100%; 
       display:block; 
       height: 32px;
-      flex: 1 0 auto;
     `;
 
 export function LargeLogo() {
@@ -28,7 +31,7 @@ const StyledLogo = styled.div`
       max-width: 100%; 
       display:block; 
       height: 32px;
-      flex: 1 0 auto ;
+      width: 32px;
     `;
 
 function Logo() {

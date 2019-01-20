@@ -8,6 +8,7 @@ import Logo from '../Logo/index';
 export const StyledFooter = styled.footer`
    display: flex;
    flex-flow: row wrap;
+   justify-content: space-between;
    background-color: ${theme.primary};
    height: 200px;
    padding: 20px;
@@ -22,11 +23,13 @@ class Footer extends React.Component {
         return (
             <StyledFooter>
                 <Logo/>
-                <Button name="Cancel"/>
-                <Button name="Cancel"/>
-                <Button name="Cancel"/>
-                <Button name="Cancel"/>
-                <Button name="Cancel"/>
+                <div>
+                    <Button name="Cancel"/>
+                    <Button name="Cancel"/>
+                    <Button name="Cancel"/>
+                    <Button name="Cancel"/>
+                    <Button name="Cancel"/>
+                </div>
             </StyledFooter>
         )
     }
