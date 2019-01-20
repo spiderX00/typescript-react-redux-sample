@@ -31,6 +31,7 @@ export const AppWrapper = styled.div`
 class App extends Component<any, any> {
     constructor(props: any) {
         super(props);
+        this.props.LoadCounter();
     }
 
     render() {
@@ -39,7 +40,7 @@ class App extends Component<any, any> {
                 <GlobalStyle/>
                 <Header/>
                 <div className="main-content">
-                    <Loading/>
+                    { this.props.state.get('loading') ? <Loading/> : this.props.state.get('maximum') }
                 </div>
                 <Footer/>
             </AppWrapper>
@@ -49,7 +50,8 @@ class App extends Component<any, any> {
 
 const stateToComputed = (state: Record<IStateRecord> = initialState) => {
     return {
-        maximum: state.get('maximum'),
+        //maximum: state.get('maximum'),
+        state,
     };
 };
 

@@ -16,6 +16,12 @@ export const StyledFooter = styled.footer`
    .button-group > button {
      border: 0;
    }
+   
+   .button-group {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-evenly:
+   }
 `;
 
 class Footer extends React.Component {
