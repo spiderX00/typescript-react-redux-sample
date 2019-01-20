@@ -9,8 +9,11 @@ export type Action =
     | { type: LOAD_COUNTER_SUCCESS, maximum: number }
     | { type: LOAD_COUNTER_ERROR };
 
-export const LoadCounter = () => (dispatch: ThunkDispatch<{}, undefined, Action>) => getNumber()
-    .then(maximum => dispatch({type: LOAD_COUNTER_SUCCESS, maximum}))
-    .catch(error => dispatch({type: LOAD_COUNTER_ERROR}));
+export const LoadCounter = () => (dispatch: ThunkDispatch<{}, undefined, Action>) => {
+    dispatch({type: LOAD_COUNTER});
+    return getNumber()
+        .then(maximum => dispatch({type: LOAD_COUNTER_SUCCESS, maximum}))
+        .catch(error => dispatch({type: LOAD_COUNTER_ERROR}));
+};
 
 export default LoadCounter;

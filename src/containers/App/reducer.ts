@@ -32,6 +32,8 @@ function AppReducer(state = initialState, action: Action) {
         case LOAD_COUNTER_ERROR: {
             return state.set('loading', false).set('error', true).set('success', false)
         }
+        default:
+            return state;
     }
 }
 

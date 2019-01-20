@@ -4,8 +4,7 @@ import styled from "../../theme";
 import LargeLogoPng from "../../assets/images/brand-logo/large.png";
 import SmallLogoPng from "../../assets/images/brand-logo/small.png";
 
-export function LargeLogo() {
-    const StyledLogo = styled.div`
+const StyledLargeLogo = styled.div`
       background: url(${LargeLogoPng}) no-repeat;
       background-size: contain;
       padding: 0;
@@ -16,13 +15,13 @@ export function LargeLogo() {
       flex: 1 0 auto;
     `;
 
+export function LargeLogo() {
     return (
-        <StyledLogo/>
+        <StyledLargeLogo/>
     )
 }
 
-function Logo() {
-    const StyledLogo = styled.div`
+const StyledLogo = styled.div`
       background: url(${SmallLogoPng}) no-repeat;
       background-size: contain;
       padding: 0;
@@ -32,6 +31,7 @@ function Logo() {
       flex: 1 0 auto ;
     `;
 
+function Logo() {
     return (
         <StyledLogo/>
     )

@@ -9,7 +9,4 @@ const store = createStore(
     applyMiddleware(thunk),
 );
 
-
-//const store = configureStore(AppReducer);
-
 export default store;
