@@ -41,7 +41,7 @@ export const StyledButton = styled.button`
       }}  
   }`;
 
-export interface Props {
+interface Props {
     name: string,
     disabled?: boolean,
 }

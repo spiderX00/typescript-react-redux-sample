@@ -23,7 +23,6 @@ class Header extends React.Component {
         return (
             <StyledHeader>
                 <LargeLogo/>
-                <Button name="Cancel"/>
             </StyledHeader>
         )
     }

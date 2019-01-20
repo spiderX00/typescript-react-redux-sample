@@ -1,12 +1,8 @@
 import React, {Children} from 'react';
-import styled, {keyframes} from "../../theme";
+import styled from "../../theme";
 
 import LargeLogoPng from "../../assets/images/brand-logo/large.png";
 import SmallLogoPng from "../../assets/images/brand-logo/small.png";
-
-const rotate = keyframes`
-    to {transform: rotate(360deg);}
-`;
 
 const StyledLargeLogo = styled.div`
       background: url(${LargeLogoPng}) no-repeat;

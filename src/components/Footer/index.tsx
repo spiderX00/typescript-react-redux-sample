@@ -13,7 +13,7 @@ export const StyledFooter = styled.footer`
    height: 200px;
    padding: 20px;
    
-   button {
+   .button-group > button {
      border: 0;
    }
 `;
@@ -23,12 +23,12 @@ class Footer extends React.Component {
         return (
             <StyledFooter>
                 <Logo/>
-                <div>
-                    <Button name="Cancel"/>
-                    <Button name="Cancel"/>
-                    <Button name="Cancel"/>
-                    <Button name="Cancel"/>
-                    <Button name="Cancel"/>
+                <div className="button-group">
+                    <Button name="Terms"/>
+                    <Button name="Privacy"/>
+                    <Button name="Cookie Policy"/>
+                    <Button name="Help"/>
+                    <Button name="FAQ"/>
                 </div>
             </StyledFooter>
         )

@@ -1,5 +1,4 @@
 import {ThunkDispatch} from 'redux-thunk';
-import * as redux from 'redux';
 import {getNumber} from "../../sdk/sdk";
 
 import {LOAD_COUNTER, LOAD_COUNTER_SUCCESS, LOAD_COUNTER_ERROR} from './constants';
