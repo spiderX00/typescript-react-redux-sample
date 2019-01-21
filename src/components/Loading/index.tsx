@@ -18,10 +18,14 @@ export const StyledLoading = styled.div`
   display: inline-block;
 `;
 
-const Loading: React.SFC = (): any => [
+const elements = [
     <StyledLoading/>,
     <P>Loading</P>,
 ];
+
+const Loading: React.SFC = (): any => elements.map((element, index) => {
+    return React.cloneElement(element, {key: index.toString()});
+});
 
 export default Loading;
 
