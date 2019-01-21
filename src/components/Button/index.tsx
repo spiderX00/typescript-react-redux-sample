@@ -24,31 +24,32 @@ export const StyledButton = styled.button`
   
   background-color: ${props => {
     return props.disabled ? theme.gray : theme.primary;
-  }}   
+}}   
    
   border-color: ${props => {
     return props.disabled ? theme.gray : theme.primary;
-  }}  
+}}  
  
   &:focus, &:hover {
       outline: 0;
       box-shadow: none;
         
       background-color: ${props => {
-       return props.disabled ? theme.gray : theme.secondary;
-      }}   
+    return props.disabled ? theme.gray : theme.secondary;
+}}   
    
        border-color: ${props => {
-       return props.disabled ? theme.gray : theme.secondary;
-      }}  
+    return props.disabled ? theme.gray : theme.secondary;
+}}  
   }`;
 
 interface Props {
     disabled?: boolean,
+    onClick?: (arg0: any) => any,
 }
 
 const Button: React.SFC<Props> = (props) => (
-    <StyledButton name="" disabled={props.disabled}>
+    <StyledButton name="" disabled={props.disabled} onClick={props.onClick}>
         {props.children}
     </StyledButton>
 );

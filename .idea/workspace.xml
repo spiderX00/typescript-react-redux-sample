@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb941b39-212b-4b90-9de7-a7bdf0c841bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Alert/index.tsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Icon/index.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Card/index.tsx" afterPath="$PROJECT_DIR$/src/components/Card/index.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/H1/index.tsx" afterPath="$PROJECT_DIR$/src/components/H1/index.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App/actions.ts" afterPath="$PROJECT_DIR$/src/containers/App/actions.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App/conditionalRendering.tsx" afterPath="$PROJECT_DIR$/src/containers/App/conditionalRendering.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App/index.tsx" afterPath="$PROJECT_DIR$/src/containers/App/index.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App/reducer.ts" afterPath="$PROJECT_DIR$/src/containers/App/reducer.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/theme/index.ts" afterPath="$PROJECT_DIR$/src/theme/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Alert/index.tsx" afterPath="$PROJECT_DIR$/src/components/Alert/index.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Button/index.tsx" afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,18 +19,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/App/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="actions.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/App/actions.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conditionalRendering.tsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="conditionalRendering.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/App/conditionalRendering.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="158">
@@ -75,8 +56,8 @@
       <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Alert/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="98">
+              <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -106,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/P/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
@@ -208,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/containers/App/wrapper.ts" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/components/Footer/index.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Button/index.tsx" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/Loading/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/Card/index.tsx" />
@@ -220,8 +200,9 @@
         <option value="$PROJECT_DIR$/src/components/P/index.tsx" />
         <option value="$PROJECT_DIR$/src/theme/index.ts" />
         <option value="$PROJECT_DIR$/src/components/H1/index.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Alert/index.tsx" />
         <option value="$PROJECT_DIR$/src/containers/App/conditionalRendering.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Alert/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Button/index.tsx" />
       </list>
     </option>
   </component>
@@ -475,7 +456,7 @@
       <workItem from="1547906455606" duration="2000" />
       <workItem from="1547907191998" duration="13959000" />
       <workItem from="1547978583328" duration="1712000" />
-      <workItem from="1548075571873" duration="15507000" />
+      <workItem from="1548075571873" duration="16642000" />
     </task>
     <task id="LOCAL-00001" summary="Added styled logo components">
       <created>1547740267976</created>
@@ -540,14 +521,22 @@
       <option name="project" value="LOCAL" />
       <updated>1548081921615</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added Alert components&#10;Added Icon components">
+      <created>1548091131492</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1548091131492</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108755000" />
+    <option name="totallyTimeSpent" value="109890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24378635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -584,7 +573,8 @@
     <MESSAGE value="Improvements" />
     <MESSAGE value="Added conditional rendering function" />
     <MESSAGE value="Added array keys in Loading component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added array keys in Loading component" />
+    <MESSAGE value="Added Alert components&#10;Added Icon components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Alert components&#10;Added Icon components" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -816,14 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Button/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="49" column="40" lean-forward="false" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/images/alert.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -900,14 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/P/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/theme/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -926,16 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Alert/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/App/conditionalRendering.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -943,6 +907,32 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Alert/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Button/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/P/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

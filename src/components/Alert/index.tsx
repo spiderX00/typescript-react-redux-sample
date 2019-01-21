@@ -72,7 +72,7 @@ const alertExpiredElements = [
     <AlertIcon/>,
     <H1>Expired</H1>,
     <P>Time's up</P>,
-    <Button>Reset</Button>,
+    <Button onClick={e => location.reload()}>Reset</Button>,
 ];
 
 export class AlertExpired extends React.Component<any, any> {
