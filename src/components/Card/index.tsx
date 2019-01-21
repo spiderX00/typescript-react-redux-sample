@@ -2,7 +2,7 @@ import React from 'react';
 import styled, {theme} from "../../theme";
 import {func} from "prop-types";
 
-export const StyledCard = styled.div`
+const StyledCard = styled.div`
   display: block;
   border: 2px solid ${theme.grey};
   background-color: white;

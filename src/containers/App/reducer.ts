@@ -7,6 +7,8 @@ export interface IStateRecord {
     loading: boolean;
     error: boolean;
     success: boolean;
+    cancelled: boolean,
+    completed: boolean,
     maximum: number;
     value: number;
     timer: number;
@@ -19,6 +21,8 @@ class State extends Record<IStateRecord>({
     loading: false,
     error: false,
     success: false,
+    cancelled: false,
+    completed: false,
     maximum: 0,
     value: 0,
     timer: 60,

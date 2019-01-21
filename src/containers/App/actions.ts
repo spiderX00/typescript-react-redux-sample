@@ -35,12 +35,13 @@ const tick = (timerId: number) => ({type: TIMER_TICK, timerId});
 const stop = () => ({type: TIMER_STOP});
 
 export const TimerCountdown = () => (dispatch: ThunkDispatch<{}, undefined, TimerAction>, getState: () => any) => {
-    const state = getState();
+    let state = getState();
     let timerId: number = -1;
     clearInterval(timerId);
 
     timerId = window.setInterval(() => {
         dispatch(tick(timerId));
+        state = getState();
         if (state.TimerReducer.get('timer') <= 0) {
             clearInterval(timerId);
             dispatch(stop());

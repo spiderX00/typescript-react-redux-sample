@@ -10,6 +10,7 @@ import {GlobalStyle} from "../../theme";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Alert from "../../components/Alert";
 
 import conditionalRendering from './conditionalRendering';
 

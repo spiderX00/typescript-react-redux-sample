@@ -7,6 +7,8 @@ import H1 from '../../components/H1';
 import P from '../../components/P';
 
 import Loading from '../../components/Loading';
+import {AlertExpired} from '../../components/Alert';
+
 import {IStateRecord} from "./reducer";
 
 interface Props {
@@ -20,7 +22,8 @@ function conditionalRendering(state: Props) {
     if (state.LoadingReducer.get('loading')) {
         template = <Loading/>
     }
-    else {
+
+    if (!state.LoadingReducer.get('loading') && !state.TimerReducer.get('timerExpired')) {
         template =
             <Card>
                 <H1>Click plus and reach {state.LoadingReducer.get('maximum')} before time
@@ -30,6 +33,10 @@ function conditionalRendering(state: Props) {
                 <Button>+</Button>
                 <P>Time left: {state.TimerReducer.get('timer')} seconds</P>
             </Card>
+    }
+
+    if(state.TimerReducer.get('timerExpired')) {
+       template = <AlertExpired/>
     }
 
     return (

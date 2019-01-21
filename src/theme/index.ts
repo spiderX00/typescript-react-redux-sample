@@ -2,6 +2,12 @@ import * as styledComponents from "styled-components";
 
 export {GlobalStyle} from './global.style';
 
+/*
+interface IThemePropsInterface {
+    color?: string;
+}
+*/
+
 const {
     default: styled,
     css,
