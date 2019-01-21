@@ -6,16 +6,12 @@ const StyledP = styled.p`
     font-family: Arial;
 `;
 
-interface Props {
-    name?: string,
-}
-
-function P({name}: Props) {
+const P: React.SFC = (props) => {
     return (
         <StyledP>
-            {Children.toArray(name)}
+            {props.children}
         </StyledP>
-    )
-}
+    );
+};
 
 export default P;

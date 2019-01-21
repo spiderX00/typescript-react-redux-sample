@@ -1,4 +1,4 @@
-import React, {Children} from 'react';
+import React from 'react';
 import styled, {theme} from "../../theme";
 
 export const StyledButton = styled.button`
@@ -16,6 +16,8 @@ export const StyledButton = styled.button`
   padding-bottom: 10px;
   cursor: pointer;
   outline: 0;
+  border: 0;
+  margin: 4px;
   color: white;
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;  
@@ -42,16 +44,15 @@ export const StyledButton = styled.button`
   }`;
 
 interface Props {
-    name: string,
     disabled?: boolean,
 }
 
-function Button({name, disabled}: Props) {
+const Button: React.SFC<Props> = (props) => {
     return (
-        <StyledButton name="" disabled={disabled}>
-            {Children.toArray(name)}
+        <StyledButton name="" disabled={props.disabled}>
+            {props.children}
         </StyledButton>
     );
-}
+};
 
 export default Button;

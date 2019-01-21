@@ -1,4 +1,4 @@
-import React, {Children} from 'react';
+import React from 'react';
 import styled, {theme} from "../../theme";
 
 import Button from "../Button";
@@ -13,10 +13,6 @@ export const StyledFooter = styled.footer`
    height: 200px;
    padding: 20px;
    
-   .button-group > button {
-     border: 0;
-   }
-   
    .button-group {
      display: flex;
      flex-flow: row wrap;
@@ -30,11 +26,10 @@ class Footer extends React.Component {
             <StyledFooter>
                 <Logo/>
                 <div className="button-group">
-                    <Button name="Terms"/>
-                    <Button name="Privacy"/>
-                    <Button name="Cookie Policy"/>
-                    <Button name="Help"/>
-                    <Button name="FAQ"/>
+                    <Button>Privacy</Button>
+                    <Button>Cookie Policy</Button>
+                    <Button>Help</Button>
+                    <Button>FAQ</Button>
                 </div>
             </StyledFooter>
         )

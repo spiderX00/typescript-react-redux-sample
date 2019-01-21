@@ -7,16 +7,12 @@ const StyledH1 = styled.h1`
   font-weight: bold;  
 `;
 
-interface Props {
-    name?: string,
-}
-
-function H1({name}: Props) {
+const H1: React.SFC = (props) => {
     return (
         <StyledH1>
-            {Children.toArray(name)}
+            {props.children}
         </StyledH1>
-    )
-}
+    );
+};
 
 export default H1;

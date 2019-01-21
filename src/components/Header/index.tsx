@@ -12,10 +12,6 @@ export const StyledHeader = styled.header`
    background-color: ${theme.primary};
    height: 80px;
    padding: 20px;
-   
-   button {
-     border: 0;
-   }
 `;
 
 class Header extends React.Component {

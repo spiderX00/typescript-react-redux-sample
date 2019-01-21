@@ -1,4 +1,4 @@
-import React, {Children} from 'react';
+import React from 'react';
 import styled, {theme} from "../../theme";
 import {func} from "prop-types";
 
@@ -9,12 +9,18 @@ export const StyledCard = styled.div`
   border-radius: 4px;
   padding: 20px;
   flex: 1 0 auto;
+  text-align: center;
+  line-height: 2;
 `;
 
-function Card() {
-    return (
-        <StyledCard/>
-    )
+class Card extends React.Component {
+    render() {
+        return (
+            <StyledCard>
+                {this.props.children}
+            </StyledCard>
+        )
+    }
 }
 
 export default Card;

@@ -1,12 +1,10 @@
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 
-import AppReducer from './containers/App/reducer';
-
-import initialState from './containers/App/reducer';
+import RootReducer,{initialState} from './containers/App/reducer';
 
 const store = createStore(
-    AppReducer,
+    RootReducer,
     applyMiddleware(thunk),
 );
 

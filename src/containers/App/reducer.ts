@@ -1,7 +1,7 @@
 import {Record} from 'immutable';
-//import {ThunkAction} from 'redux-thunk';
-import {LOAD_COUNTER, LOAD_COUNTER_SUCCESS, LOAD_COUNTER_ERROR} from './constants';
-import {Action} from './actions';
+import {combineReducers} from 'redux';
+import {LOAD_COUNTER, LOAD_COUNTER_SUCCESS, LOAD_COUNTER_ERROR, TIMER_START, TIMER_TICK, TIMER_STOP} from './constants';
+import {LoadingAction, TimerAction} from './actions';
 
 export interface IStateRecord {
     loading: boolean;
@@ -9,6 +9,10 @@ export interface IStateRecord {
     success: boolean;
     maximum: number;
     value: number;
+    timer: number;
+    timerOn: boolean;
+    timerExpired: boolean;
+    timerId: number;
 }
 
 class State extends Record<IStateRecord>({
@@ -17,11 +21,16 @@ class State extends Record<IStateRecord>({
     success: false,
     maximum: 0,
     value: 0,
-}) {}
+    timer: 60,
+    timerOn: false,
+    timerExpired: false,
+    timerId: -1,
+}) {
+}
 
 export const initialState = new State();
 
-function AppReducer(state = initialState, action: Action) {
+export function LoadingReducer(state = initialState, action: LoadingAction) {
     switch (action.type) {
         case LOAD_COUNTER: {
             return state.set('loading', true).set('error', false).set('success', false)
@@ -37,4 +46,20 @@ function AppReducer(state = initialState, action: Action) {
     }
 }
 
-export default AppReducer;
+export function TimerReducer(state = initialState, action: TimerAction) {
+    switch (action.type) {
+        case TIMER_START: {
+            return state.set('timerOn', true).set('timerExpired', false);
+        }
+        case TIMER_TICK: {
+            return state.set('timerId', action.timerId).update('timer', timer => timer > 0 ? timer - 1 : timer);
+        }
+        case TIMER_STOP: {
+            return state.set('timerId', -1).set('timerOn', false).set('timerExpired', true);
+        }
+        default:
+            return state;
+    }
+}
+
+export default combineReducers({LoadingReducer, TimerReducer});

@@ -18,12 +18,10 @@ export const StyledLoading = styled.div`
   display: inline-block;
 `;
 
-function Loading(): any {
-    return [
-        <StyledLoading/>,
-        <P name="Loading"/>,
-    ]
-}
+const Loading: React.SFC = (): any => [
+    <StyledLoading/>,
+    <P>Loading</P>,
+];
 
 export default Loading;
 
