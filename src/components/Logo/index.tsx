@@ -14,11 +14,9 @@ const StyledLargeLogo = styled.div`
       height: 32px;
     `;
 
-export function LargeLogo() {
-    return (
-        <StyledLargeLogo/>
-    )
-}
+export const LargeLogo: React.SFC = () => (
+    <StyledLargeLogo/>
+);
 
 const StyledLogo = styled.div`
       background: url(${SmallLogoPng}) no-repeat;
@@ -30,10 +28,8 @@ const StyledLogo = styled.div`
       width: 32px;
     `;
 
-function Logo() {
-    return (
-        <StyledLogo/>
-    )
-}
+const Logo: React.SFC = () => (
+    <StyledLogo/>
+);
 
 export default Logo;

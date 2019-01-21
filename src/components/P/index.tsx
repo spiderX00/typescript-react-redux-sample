@@ -6,12 +6,10 @@ const StyledP = styled.p`
     font-family: Arial;
 `;
 
-const P: React.SFC = (props) => {
-    return (
-        <StyledP>
-            {props.children}
-        </StyledP>
-    );
-};
+const P: React.SFC = (props) => (
+    <StyledP>
+        {props.children}
+    </StyledP>
+);
 
 export default P;

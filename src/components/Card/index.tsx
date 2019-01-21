@@ -13,14 +13,10 @@ export const StyledCard = styled.div`
   line-height: 2;
 `;
 
-class Card extends React.Component {
-    render() {
-        return (
-            <StyledCard>
-                {this.props.children}
-            </StyledCard>
-        )
-    }
-}
+const Card: React.SFC = (props) => (
+    <StyledCard>
+        {props.children}
+    </StyledCard>
+);
 
 export default Card;

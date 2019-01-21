@@ -47,12 +47,10 @@ interface Props {
     disabled?: boolean,
 }
 
-const Button: React.SFC<Props> = (props) => {
-    return (
-        <StyledButton name="" disabled={props.disabled}>
-            {props.children}
-        </StyledButton>
-    );
-};
+const Button: React.SFC<Props> = (props) => (
+    <StyledButton name="" disabled={props.disabled}>
+        {props.children}
+    </StyledButton>
+);
 
 export default Button;
