@@ -1,5 +1,4 @@
 import React from 'react';
-import {Record} from 'immutable';
 
 import Card from '../../components/Card';
 import Button from '../../components/Button';
@@ -9,33 +8,26 @@ import P from '../../components/P';
 import Loading from '../../components/Loading';
 import {AlertExpired} from '../../components/Alert';
 
-import {IStateRecord} from "./reducer";
-
-interface Props {
-    LoadingReducer: Record<IStateRecord>;
-    TimerReducer: Record<IStateRecord>;
-}
-
-function conditionalRendering(state: Props) {
+function conditionalRendering(props: any) {
     let template = null;
 
-    if (state.LoadingReducer.get('loading')) {
+    if (props.state.LoadingReducer.get('loading')) {
         template = <Loading/>
     }
 
-    if (!state.LoadingReducer.get('loading') && !state.TimerReducer.get('timerExpired')) {
+    if (!props.state.LoadingReducer.get('loading') && !props.state.TimerReducer.get('timerExpired')) {
         template =
             <Card>
-                <H1>Click plus and reach {state.LoadingReducer.get('maximum')} before time
+                <H1>Click plus and reach {props.state.LoadingReducer.get('maximum')} before time
                     expires!</H1>
-                <Button>-</Button>
-                <Button disabled={true}>{state.LoadingReducer.get('value')}</Button>
-                <Button>+</Button>
-                <P>Time left: {state.TimerReducer.get('timer')} seconds</P>
+                <Button disabled={props.state.CounterReducer.get('value') <= 0} onClick={e => props.DecreaseCounter()}>-</Button>
+                <Button disabled={true}>{props.state.CounterReducer.get('value')}</Button>
+                <Button disabled={props.state.CounterReducer.get('completed')} onClick={e => props.IncrementCounter()}>+</Button>
+                <P>Time left: {props.state.TimerReducer.get('timer')} seconds</P>
             </Card>
     }
 
-    if(state.TimerReducer.get('timerExpired')) {
+    if(props.state.TimerReducer.get('timerExpired')) {
        template = <AlertExpired/>
     }
 

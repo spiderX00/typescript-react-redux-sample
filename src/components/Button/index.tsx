@@ -48,10 +48,10 @@ interface Props {
     onClick?: (arg0: any) => any,
 }
 
-const Button: React.SFC<Props> = (props) => (
-    <StyledButton name="" disabled={props.disabled} onClick={props.onClick}>
+const Button: React.SFC<Props> = function (props) {
+    return <StyledButton disabled={props.disabled} onClick={props.onClick}>
         {props.children}
-    </StyledButton>
-);
+    </StyledButton>;
+};
 
 export default Button;

@@ -10,11 +10,10 @@ import {GlobalStyle} from "../../theme";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Alert from "../../components/Alert";
 
 import conditionalRendering from './conditionalRendering';
 
-import {TimerCountdown, LoadCounter, LoadingAction} from './actions';
+import {TimerCountdown, LoadCounter, LoadingAction, IncrementCounter, DecreaseCounter} from './actions';
 
 class App extends Component<any, any> {
     constructor(props: any) {
@@ -32,7 +31,7 @@ class App extends Component<any, any> {
             <AppWrapper>
                 <GlobalStyle/>
                 <Header/>
-                {conditionalRendering(this.props.state)}
+                {conditionalRendering(this.props)}
                 <Footer/>
             </AppWrapper>
         );
@@ -48,6 +47,8 @@ const stateToComputed = (state: Record<IStateRecord> = initialState) => {
 const dispatchToActions = {
     LoadCounter,
     TimerCountdown,
+    IncrementCounter,
+    DecreaseCounter,
 };
 
 export default connect(stateToComputed, dispatchToActions)(App);

@@ -1,7 +1,19 @@
 import {Record} from 'immutable';
 import {combineReducers} from 'redux';
-import {LOAD_COUNTER, LOAD_COUNTER_SUCCESS, LOAD_COUNTER_ERROR, TIMER_START, TIMER_TICK, TIMER_STOP} from './constants';
-import {LoadingAction, TimerAction} from './actions';
+
+import {
+    LOAD_COUNTER,
+    LOAD_COUNTER_SUCCESS,
+    LOAD_COUNTER_ERROR,
+    TIMER_START,
+    TIMER_TICK,
+    TIMER_STOP,
+    INCREMENT_COUNTER,
+    DECREASE_COUNTER,
+    COUNTER_TO_MAXIMUM,
+} from './constants';
+
+import {LoadingAction, TimerAction, CounterAction} from './actions';
 
 export interface IStateRecord {
     loading: boolean;
@@ -66,4 +78,20 @@ export function TimerReducer(state = initialState, action: TimerAction) {
     }
 }
 
-export default combineReducers({LoadingReducer, TimerReducer});
+export function CounterReducer(state = initialState, action: CounterAction) {
+    switch (action.type) {
+        case INCREMENT_COUNTER: {
+            return state.update('value', counter => counter + 1);
+        }
+        case DECREASE_COUNTER: {
+            return state.update('value', counter => counter - 1).set('completed', false);
+        }
+        case COUNTER_TO_MAXIMUM: {
+            return state.set('completed', true);
+        }
+        default:
+            return state;
+    }
+}
+
+export default combineReducers({LoadingReducer, TimerReducer, CounterReducer});
