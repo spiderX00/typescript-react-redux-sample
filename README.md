@@ -1,44 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Interview
 
-## Available Scripts
+The app starts in A.
 
-In the project directory, you can run:
+When the app starts, it makes a request for the maximum that the counter can reach.
+The request is made using the `getNumber` function in the `skd.ts` file.
+The `getNumber` function returns a promise.
 
-### `npm start`
+If the request fails, the app must go to D.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The `60 seconds` string is a countdown.
+The countdown always starts from 60 seconds.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Clicking on `+` increases the counter (second row, in the middle), clicking on `-` decreases it.
+The counter must never go above the maximum (4 in the examples) or below zero.
 
-### `npm test`
+In B1/C1, clicking on `Show QR code` displays the QR code.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In B2/C2, clicking on `Hide QR code` hides the QR code.
 
-### `npm run build`
+The QR code must display the value `chainsidepay`.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clicking on `+` in B1 takes the app to C1.
+Clicking on `+` in B2 takes the app to C2.
+Same goes when clicking on `-` enough times from C1/C2.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Clicking on `Cancel` on the top right in B1/B2 takes the app to E.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When the counter reaches the maximum, the app goes to F.
 
-### `npm run eject`
+When the timer expires, the app goes to G.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In E and G, clicking on `Reset` refreshes the page.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In F, clicking on `Continue` takes you to `http://example.com`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Implementation Requirements
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Implement the app in React, using TypeScript and Redux.
 
-## Learn More
+Unit test components and functions.
+To test the components, use [react-testing-library].
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[react-testing-library]: https://github.com/kentcdodds/react-testing-library
