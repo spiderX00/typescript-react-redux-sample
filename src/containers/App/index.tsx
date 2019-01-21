@@ -6,14 +6,9 @@ import {Record} from 'immutable';
 import {IStateRecord, initialState} from './reducer';
 import AppWrapper from './wrapper';
 
-import {GlobalStyle} from "../../theme";
-
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-
 import conditionalRendering from './conditionalRendering';
 
-import {TimerCountdown, LoadCounter, LoadingAction, IncrementCounter, DecreaseCounter} from './actions';
+import {TimerCountdown, LoadCounter, IncrementCounter, DecreaseCounter, EmitCancel} from './actions';
 
 class App extends Component<any, any> {
     constructor(props: any) {
@@ -22,23 +17,21 @@ class App extends Component<any, any> {
 
     componentWillMount() {
         this.props.LoadCounter();
-        if (!this.props.state.LoadingReducer.get('loading'))
+        if (!this.props.state.LoadingReducer.get('loading')) {
             this.props.TimerCountdown();
+        }
     }
 
     render() {
         return (
             <AppWrapper>
-                <GlobalStyle/>
-                <Header/>
-                {conditionalRendering(this.props)}
-                <Footer/>
+                {conditionalRendering({props: this.props})}
             </AppWrapper>
         );
     }
 }
 
-const stateToComputed = (state: Record<IStateRecord> = initialState) => {
+const stateToComputed = (state: Record<IStateRecord>) => {
     return {
         state,
     };
@@ -49,6 +42,7 @@ const dispatchToActions = {
     TimerCountdown,
     IncrementCounter,
     DecreaseCounter,
+    EmitCancel,
 };
 
 export default connect(stateToComputed, dispatchToActions)(App);

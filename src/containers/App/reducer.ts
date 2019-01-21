@@ -5,6 +5,7 @@ import {
     LOAD_COUNTER,
     LOAD_COUNTER_SUCCESS,
     LOAD_COUNTER_ERROR,
+    LOAD_COUNTER_CANCELLED,
     TIMER_START,
     TIMER_TICK,
     TIMER_STOP,
@@ -56,6 +57,9 @@ export function LoadingReducer(state = initialState, action: LoadingAction) {
         }
         case LOAD_COUNTER_ERROR: {
             return state.set('loading', false).set('error', true).set('success', false)
+        }
+        case LOAD_COUNTER_CANCELLED: {
+            return state.set('cancelled', true).set('error', false);
         }
         default:
             return state;

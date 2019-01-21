@@ -6,6 +6,8 @@ import P from '../P';
 import H1 from '../H1';
 import Icon, {AlertIcon, ErrorIcon} from '../Icon';
 
+import {URL_REDIRECT} from './constants';
+
 const StyledAlert = styled.div`
     display: block;
     border: 0;
@@ -21,8 +23,9 @@ interface Props {
 
 const alertErrorElements = [
     <ErrorIcon/>,
-    <H1>An error occured</H1>,
-    <P>Ah error occured</P>
+    <H1 color={theme.error}>An error occured</H1>,
+    <P>Ah error occured</P>,
+    <Button onClick={e => location.reload()}>Reset</Button>
 ];
 
 export class AlertError extends React.Component<any, any> {
@@ -37,8 +40,9 @@ export class AlertError extends React.Component<any, any> {
 
 const alertCancelledElements = [
     <ErrorIcon/>,
-    <H1>Cancelled</H1>,
-    <P>Nothing to do here anymore</P>
+    <H1 color={theme.error}>Cancelled</H1>,
+    <P>Nothing to do here anymore</P>,
+    <Button onClick={e => location.reload()}>Reset</Button>
 ];
 
 export class AlertCancelled extends React.Component<any, any> {
@@ -53,9 +57,9 @@ export class AlertCancelled extends React.Component<any, any> {
 
 const alertElements = [
     <Icon/>,
-    <H1>Completed</H1>,
+    <H1 color={theme.success}>Completed</H1>,
     <P>Oh yeah</P>,
-    <Button>Continue</Button>,
+    <Button onClick={e => location.href = URL_REDIRECT}>Continue</Button>,
 ];
 
 class Alert extends React.Component<any, any> {
@@ -70,7 +74,7 @@ class Alert extends React.Component<any, any> {
 
 const alertExpiredElements = [
     <AlertIcon/>,
-    <H1>Expired</H1>,
+    <H1 color={theme.alert}>Expired</H1>,
     <P>Time's up</P>,
     <Button onClick={e => location.reload()}>Reset</Button>,
 ];

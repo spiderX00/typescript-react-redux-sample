@@ -1,0 +1,1 @@
+export const URL_REDIRECT: string = 'http://example.com';

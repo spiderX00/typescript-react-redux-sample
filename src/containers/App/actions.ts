@@ -5,6 +5,7 @@ import {
     LOAD_COUNTER,
     LOAD_COUNTER_SUCCESS,
     LOAD_COUNTER_ERROR,
+    LOAD_COUNTER_CANCELLED,
     TIMER_START,
     TIMER_TICK,
     TIMER_STOP,
@@ -17,7 +18,8 @@ import {
 export type LoadingAction =
     { type: LOAD_COUNTER }
     | { type: LOAD_COUNTER_SUCCESS, maximum: number }
-    | { type: LOAD_COUNTER_ERROR };
+    | { type: LOAD_COUNTER_ERROR }
+    | { type: LOAD_COUNTER_CANCELLED };
 
 export type TimerAction =
     { type: TIMER_START }
@@ -34,6 +36,10 @@ export const LoadCounter = () => (dispatch: ThunkDispatch<{}, undefined, Loading
     return getNumber()
         .then(maximum => dispatch({type: LOAD_COUNTER_SUCCESS, maximum}))
         .catch(error => dispatch({type: LOAD_COUNTER_ERROR}));
+};
+
+export const EmitCancel = () => (dispatch: ThunkDispatch<{}, undefined, LoadingAction>) => {
+    return dispatch({type: LOAD_COUNTER_CANCELLED});
 };
 
 const tick = (timerId: number) => ({type: TIMER_TICK, timerId});

@@ -30,7 +30,7 @@ export const defaultLabel = 'base';
 
 export const theme: IThemeInterface = {
     key: defaultLabel,
-    base: "#FFFFFF",
+    base: "#020202",
     primary: "#39618A",
     secondary: "#395675",
     grey: "#CFD7DF",

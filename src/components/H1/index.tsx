@@ -1,5 +1,5 @@
 import React, {Children} from 'react';
-import styled from '../../theme'
+import styled, {theme} from '../../theme'
 
 const StyledH1 = styled.h1`
   font-size: 16px;
@@ -8,8 +8,12 @@ const StyledH1 = styled.h1`
   margin-bottom: 0;
 `;
 
-const H1: React.SFC = function (props) {
-    return <StyledH1>
+interface Props {
+    color?: string;
+}
+
+const H1: React.SFC<Props> = function (props) {
+    return <StyledH1 style={{color: props.color || theme.base}}>
         {props.children}
     </StyledH1>;
 };

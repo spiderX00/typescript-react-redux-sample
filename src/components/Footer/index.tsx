@@ -16,8 +16,15 @@ export const StyledFooter = styled.footer`
    .button-group {
      display: flex;
      flex-flow: row wrap;
-     justify-content: space-evenly:
+     justify-content: space-between;
    }
+   
+    @media (max-width: 720px) {
+       .button-group {
+          justify-content: center;  
+       }
+    }
+  
 `;
 
 class Footer extends React.Component {
@@ -26,6 +33,7 @@ class Footer extends React.Component {
             <StyledFooter>
                 <Logo/>
                 <div className="button-group">
+                    <Button>Terms</Button>
                     <Button>Privacy</Button>
                     <Button>Cookie Policy</Button>
                     <Button>Help</Button>
