@@ -7,9 +7,7 @@ const AppWrapper = styled.div`
     min-height: 100vh; 
         
     .main-content {
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;    
+        
     }
 `;
 

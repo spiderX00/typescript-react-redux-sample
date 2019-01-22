@@ -9,12 +9,14 @@ import Icon, {AlertIcon, ErrorIcon} from '../Icon';
 import {URL_REDIRECT} from './constants';
 
 const StyledAlert = styled.div`
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
     border: 0;
     background: white;
     flex: 1 0 auto;
     text-align: center;
-    line-height: 2;
 `;
 
 interface Props {
@@ -34,7 +36,9 @@ export class AlertError extends React.Component<any, any> {
     }
 
     render() {
-        return alertErrorElements.map((element, index) => React.cloneElement(element, {key: index.toString()}));
+        return <StyledAlert>
+            {alertErrorElements.map((element, index) => React.cloneElement(element, {key: index.toString()}))}
+        </StyledAlert>
     }
 }
 
@@ -51,7 +55,9 @@ export class AlertCancelled extends React.Component<any, any> {
     }
 
     render() {
-        return alertCancelledElements.map((element, index) => React.cloneElement(element, {key: index.toString()}));
+        return <StyledAlert>
+            {alertCancelledElements.map((element, index) => React.cloneElement(element, {key: index.toString()}))}
+        </StyledAlert>
     }
 }
 
@@ -68,7 +74,9 @@ class Alert extends React.Component<any, any> {
     }
 
     render() {
-        return alertElements.map((element, index) => React.cloneElement(element, {key: index.toString()}));
+        return <StyledAlert>
+            {alertElements.map((element, index) => React.cloneElement(element, {key: index.toString()}))}
+        </StyledAlert>
     }
 }
 
@@ -85,7 +93,9 @@ export class AlertExpired extends React.Component<any, any> {
     }
 
     render() {
-        return alertExpiredElements.map((element, index) => React.cloneElement(element, {key: index.toString()}));
+        return <StyledAlert>
+            {alertExpiredElements.map((element, index) => React.cloneElement(element, {key: index.toString()}))}
+        </StyledAlert>
     }
 }
 

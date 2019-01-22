@@ -9,7 +9,14 @@ const rotate = keyframes`
     to {transform: rotate(360deg);}
 `;
 
-export const StyledLoading = styled.div`
+const StyledElements = styled.div`
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+`;
+
+const StyledLoading = styled.div`
   background: url(${LoadingIcon}) no-repeat;
   animation: ${rotate} .75s linear infinite;
   height: 32px;
@@ -24,7 +31,9 @@ const elements = [
 ];
 
 const Loading: React.SFC = (): any => elements.map((element, index) => {
-    return React.cloneElement(element, {key: index.toString()});
+    return <StyledElements>
+        {React.cloneElement(element, {key: index.toString()})}
+    </StyledElements>;
 });
 
 export default Loading;

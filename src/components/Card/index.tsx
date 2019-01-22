@@ -11,10 +11,13 @@ const StyledCard = styled.div`
   flex: 1 0 auto;
   text-align: center;
   line-height: 2;
+  margin: 2px auto;
+  max-width: 250px;
+  height: auto;
 `;
 
 const Card: React.SFC = (props) => (
-    <StyledCard>
+    <StyledCard className="card">
         {props.children}
     </StyledCard>
 );
