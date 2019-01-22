@@ -4,15 +4,16 @@ import {func} from "prop-types";
 
 const StyledCard = styled.div`
   display: block;
-  border: 2px solid ${theme.grey};
+  border: 1px solid ${theme.grey};
   background-color: white;
   border-radius: 4px;
-  padding: 20px;
-  flex: 1 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
-  line-height: 2;
-  margin: 2px auto;
-  max-width: 250px;
+  line-height: 1.1;
+  margin: 10px;
+  max-width: 280px;
+  flex: 1 0 auto;
   height: auto;
 `;
 

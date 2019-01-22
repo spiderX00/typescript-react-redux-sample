@@ -10,7 +10,7 @@ import QRChainsidepay from '../../components/QRchainsidepay';
 const StyledElements = styled.div`
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 `;
 
