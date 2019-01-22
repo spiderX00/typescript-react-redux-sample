@@ -32,7 +32,7 @@ const elements = [
     React.cloneElement(element, {key: index.toString()})
 );
 
-const Loading: React.SFC = (): any => <StyledElements>{elements}</StyledElements>
+const Loading: React.SFC = (): any => <StyledElements>{elements}</StyledElements>;
 
 export default Loading;
 

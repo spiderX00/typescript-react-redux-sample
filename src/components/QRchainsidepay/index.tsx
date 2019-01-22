@@ -1,6 +1,5 @@
 import * as React from "react";
 import QRCode from 'qrcode.react';
-import styled, {theme} from '../../theme'
 
 import H1 from '../H1';
 import Button from '../Button';
