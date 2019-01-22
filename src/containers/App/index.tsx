@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, ReactNode} from 'react';
 import {connect} from 'react-redux';
 
 import {Record} from 'immutable';
@@ -11,6 +11,9 @@ import conditionalRendering from './conditionalRendering';
 import {TimerCountdown, LoadCounter, IncrementCounter, DecreaseCounter, EmitCancel} from './actions';
 
 class App extends Component<any, any> {
+
+    private template: ReactNode = '';
+
     constructor(props: any) {
         super(props);
     }
@@ -23,9 +26,10 @@ class App extends Component<any, any> {
     }
 
     render() {
+        this.template = conditionalRendering({props: this.props});
         return (
             <AppWrapper>
-                {conditionalRendering({props: this.props})}
+                {this.template}
             </AppWrapper>
         );
     }

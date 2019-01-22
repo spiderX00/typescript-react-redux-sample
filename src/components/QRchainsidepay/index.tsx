@@ -10,7 +10,7 @@ const QRValue = 'chainsidepay';
 
 class QRchainsidepay extends React.Component {
 
-    hideQR: boolean = true;
+    private hideQR: boolean = true;
 
     switchState() {
         this.hideQR = !this.hideQR;
