@@ -20,7 +20,7 @@ interface Props {
 
 export class Panel extends React.Component<any, any> {
 
-    constructor(props:Props) {
+    constructor(props: Props) {
         super(props);
     }
 

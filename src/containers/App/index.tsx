@@ -10,7 +10,7 @@ import conditionalRendering from './conditionalRendering';
 
 import {TimerCountdown, LoadCounter, IncrementCounter, DecreaseCounter, EmitCancel} from './actions';
 
-class App extends Component<any, any> {
+export class App extends Component<any, any> {
 
     private template: ReactNode = '';
 
