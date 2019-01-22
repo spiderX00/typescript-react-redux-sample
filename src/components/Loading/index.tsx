@@ -28,13 +28,11 @@ const StyledLoading = styled.div`
 const elements = [
     <StyledLoading/>,
     <P>Loading</P>,
-];
+].map((element, index) =>
+    React.cloneElement(element, {key: index.toString()})
+);
 
-const Loading: React.SFC = (): any => elements.map((element, index) => {
-    return <StyledElements>
-        {React.cloneElement(element, {key: index.toString()})}
-    </StyledElements>;
-});
+const Loading: React.SFC = (): any => <StyledElements>{elements}</StyledElements>
 
 export default Loading;
 

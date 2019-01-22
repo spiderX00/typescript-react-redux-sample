@@ -38,11 +38,11 @@ export class Panel extends React.Component<any, any> {
                         onClick={e => props.IncrementCounter()}>+</Button>
                 <P>Time left: {props.state.TimerReducer.get('timer')} seconds</P>
             </Card>, <QRChainsidepay/>
-        ];
+        ].map((element, index) => React.cloneElement(element, {key: index.toString()}));
 
         return (
             <StyledElements>
-                {elementsTemplate.map((element, index) => React.cloneElement(element, {key: index.toString()}))}
+                {elementsTemplate}
             </StyledElements>
         )
     }

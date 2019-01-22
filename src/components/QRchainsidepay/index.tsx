@@ -23,11 +23,11 @@ class QRchainsidepay extends React.Component {
                     <H1>QRC codes are cool.
                         Want to see one?</H1>,
                     <Button onClick={e => this.switchState()}>Show QR Code</Button>
-                ] : [
+                ].map((element, index) => React.cloneElement(element, {key: index.toString()})) : [
                     <H1>Here a nice QR code!</H1>,
                     <QRCode value={QRValue}/>,
                     <Button onClick={e => this.switchState()}>Hide QR Code</Button>,
-                ]
+                ].map((element, index) => React.cloneElement(element, {key: index.toString()}))
                 }
             </Card>
         )

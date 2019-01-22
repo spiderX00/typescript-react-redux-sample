@@ -4,7 +4,7 @@ import App from './App';
 
 afterEach(cleanup);
 
-it('renders without crashing', () => {
+test('renders without crashing', () => {
   const div = document.createElement('div');
   render(<App />, div);
 });
