@@ -10,17 +10,6 @@ const CANCELLED = 'cancelled';
 const COMPLETED = 'completed';
 const EXPIRED = 'expired';
 
-export const IconTypeUrl = (alertType: string) => {
-    switch (alertType) {
-        case ERROR || CANCELLED:
-            return errorIcon;
-        case EXPIRED:
-            return alertIcon;
-        default:
-            return successIcon;
-    }
-};
-
 const Icon: React.SFC = () => {
     const StyledIcon = styled.div`
       background: url(${successIcon}) no-repeat;
